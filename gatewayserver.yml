@@ -2,12 +2,16 @@ server:
   port: 8072
 
 spring:
+  application:
+    name: gatewayserver
+
   cloud:
     gateway:
-      discovery:
-        locator:
-          enabled: true
-          
+      server:
+        webflux:
+          discovery:
+            locator:
+              enabled: true
 
 eureka:
   instance:
